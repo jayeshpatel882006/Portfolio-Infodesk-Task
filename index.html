@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jayesh Patel | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins',sans-serif;
+            scroll-behavior:smooth;
+        }
+
+        body{
+            background:linear-gradient(135deg,#0a0f1c,#0d1117,#02040a);
+            color:#e6edf3;
+        }
+
+        .container{
+            max-width:1100px;
+            margin:auto;
+            text-align:center;
+        }
+
+        /* HERO */
+        header{
+            height:100vh;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            background: radial-gradient(circle at top, #161b22, #02040a);
+            animation:fadeIn 1.5s ease-in;
+        }
+
+        h1{
+            font-size:4.5rem;
+            letter-spacing:2px;
+            background:linear-gradient(90deg,#58a6ff,#79c0ff,#a5d6ff);
+            -webkit-background-clip:text;
+            color:transparent;
+            animation:slideDown 1s ease;
+        }
+
+        header p{
+            margin-top:15px;
+            font-size:1.4rem;
+            color:#9da7b3;
+            animation:fadeIn 2s ease;
+        }
+
+        .btn{
+            margin-top:30px;
+            padding:12px 28px;
+            border-radius:30px;
+            border:none;
+            background:#58a6ff;
+            color:white;
+            font-weight:600;
+            cursor:pointer;
+            transition:.3s;
+        }
+
+        .btn:hover{
+            transform:translateY(-5px);
+            box-shadow:0 10px 25px rgba(88,166,255,.4);
+        }
+
+        section{
+            padding:90px 10%;
+        }
+
+        h2{
+            font-size:2.4rem;
+            margin-bottom:30px;
+            color:#58a6ff;
+        }
+
+        /* CARDS */
+        .grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+            gap:25px;
+        }
+
+        .card{
+            background:#161b22;
+            padding:30px;
+            border-radius:18px;
+            box-shadow:0 10px 35px rgba(0,0,0,.6);
+            transition:.4s;
+            position:relative;
+            overflow:hidden;
+        }
+
+        .card::before{
+            content:"";
+            position:absolute;
+            width:200%;
+            height:200%;
+            background:linear-gradient(120deg,transparent,#58a6ff33,transparent);
+            transform:rotate(25deg);
+            top:-150%;
+            left:-150%;
+            transition:.6s;
+        }
+
+        .card:hover::before{
+            top:100%;
+            left:100%;
+        }
+
+        .card:hover{
+            transform:translateY(-12px) scale(1.02);
+        }
+
+        /* PERSONAL INFO */
+        .info p{
+            margin:8px 0;
+            color:#c9d1d9;
+        }
+
+        /* FOOTER */
+        footer{
+            text-align:center;
+            padding:40px;
+            border-top:1px solid #30363d;
+            color:#8b949e;
+        }
+
+        /* ANIMATIONS */
+        @keyframes fadeIn{
+            from{opacity:0}
+            to{opacity:1}
+        }
+
+        @keyframes slideDown{
+            from{opacity:0; transform:translateY(-40px)}
+            to{opacity:1; transform:translateY(0)}
+        }
+
+        @media(max-width:768px){
+            h1{font-size:2.8rem}
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Jayesh Patel</h1>
+    <p>Aspiring Cloud Engineer | Full Stack Developer | Problem Solver</p>
+    <button class="btn" onclick="document.getElementById('projects').scrollIntoView()">View My Work</button>
+</header>
+
+<section>
+    <div class="container">
+        <h2>👤 Personal Information</h2>
+        <div class="grid">
+            <div class="card info">
+                <p><strong>Full Name:</strong> Jayesh Patel</p>
+                <p><strong>Email:</strong> your-email@example.com</p>
+                <p><strong>Phone:</strong> +91 XXXXX XXXXX</p>
+                <p><strong>Location:</strong> Your City, India</p>
+            </div>
+
+            <div class="card info">
+                <p><strong>Career Goal:</strong></p>
+                <p>To become a highly skilled cloud and software engineer while building scalable applications that impact millions of users.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>🎓 Education</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>B.Tech in Cloud Computing</h3>
+                <p>XYZ University (Edit Later)</p>
+                <p>2022 - 2026</p>
+                <p>CGPA: 8.5 / 10 (Replace with yours)</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="container">
+        <h2>🚀 Featured Projects</h2>
+        <div class="grid">
+
+            <div class="card">
+                <h3>CRM Web Application</h3>
+                <p>Built a full-stack CRM platform using React and Spring Boot with secure authentication and role-based dashboards.</p>
+                <p><strong>Tech:</strong> React, Spring Boot, MySQL</p>
+            </div>
+
+            <div class="card">
+                <h3>Real-Time Chat Application</h3>
+                <p>Developed a scalable messaging system supporting instant communication using WebSockets.</p>
+                <p><strong>Tech:</strong> Java, WebSocket, REST APIs</p>
+            </div>
+
+            <div class="card">
+                <h3>Admin Dashboard</h3>
+                <p>Created an analytics dashboard with dynamic charts and user management features.</p>
+                <p><strong>Tech:</strong> React, Chart.js</p>
+            </div>
+
+            <div class="card">
+                <h3>AI Portfolio Website</h3>
+                <p>A modern personal portfolio showcasing projects, skills, and achievements with a premium dark UI.</p>
+                <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>⚡ Skills</h2>
+        <div class="grid">
+            <div class="card">Java</div>
+            <div class="card">React</div>
+            <div class="card">Spring Boot</div>
+            <div class="card">Cloud Computing</div>
+            <div class="card">REST APIs</div>
+            <div class="card">MySQL</div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Jayesh Patel. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
